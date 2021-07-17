@@ -10,6 +10,7 @@
 Vue Lightbox Advanced provides flexibility of displaying first x (1-5) images of your gallery in a grid view as you seen on Facebook timeline. Click on the thumbnail will return an event with the index or file url (src) as per passed props that can be used to show the image or can be used to redirect to that specific file url (src).
 It provides the shuffling images according to given options in docs.
 
+> Note: It requires parent height and width as the component will adapt to its resolutions
 
 ## 🎨 Features
 
@@ -40,13 +41,14 @@ https://unpkg.com/vue-lightbox-advanced
 
 ```html
 <template>
-  <div>
+  <div style="height: 250px; width: 400px;">
     <VueLightboxAdvanced :items="images" />
   </div>
 </template>
 
 <script>
   import VueLightboxAdvanced from 'vue-lightbox-advanced'
+  import 'vue-lightbox-advanced/dist/VueLightboxAdvanced.css'
 
   export default {
     name: 'MyComponent',
@@ -76,6 +78,6 @@ https://unpkg.com/vue-lightbox-advanced
 
 This software is licensed under the [MIT](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/LICENSE).
 
-## Reference From
+### Reference
 
 [Morioh-Lab/v-lightbox](https://github.com/Morioh-Lab/v-lightbox)
