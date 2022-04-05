@@ -64,8 +64,6 @@ function _nonIterableRest() {
 //
 //
 //
-//
-//
 var script = {
   name: 'VueLightboxAdvanced',
   props: {
@@ -258,7 +256,7 @@ var __vue_inject_styles__ = undefined;
 var __vue_scope_id__ = undefined;
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-4b9dfaef";
+var __vue_module_identifier__ = "data-v-0b901fd6";
 /* functional template */
 
 var __vue_is_functional_template__ = false;
@@ -289,8 +287,7 @@ var component = /*#__PURE__*/(function () {
 })(); // It's possible to expose named exports when writing components that can
 // also be used as directives, etc. - eg. import { RollupDemoDirective } from 'rollup-demo';
 // export const RollupDemoDirective = directive;
-var namedExports=/*#__PURE__*/Object.freeze({__proto__:null,'default':component});// Attach named exports directly to component. IIFE/CJS will
-// only expose one global var, with named exports exposed as properties of
+var namedExports=/*#__PURE__*/Object.freeze({__proto__:null,'default':component});// only expose one global var, with named exports exposed as properties of
 // that global var (eg. plugin.namedExport)
 
 Object.entries(namedExports).forEach(function (_ref) {

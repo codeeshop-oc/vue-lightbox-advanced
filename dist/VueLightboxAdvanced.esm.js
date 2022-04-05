@@ -7,8 +7,6 @@
 //
 //
 //
-//
-//
 var script = {
   name: 'VueLightboxAdvanced',
   props: {
@@ -198,8 +196,8 @@ var __vue_render__ = function () {
   }, [_c('div', {
     staticClass: "lb-grid",
     class: [_vm.css, _vm.items.length > _vm.cells ? 'lb-grid-' + _vm.cells : 'lb-grid-' + _vm.items.length]
-  }, [_vm._l(_vm.shuffled, function (item, i) {
-    return [i < _vm.cells ? _c('a', {
+  }, _vm._l(_vm.shuffled, function (item, i) {
+    return i < _vm.cells ? _c('a', {
       staticClass: "lb-item",
       style: _vm.bg(item.src),
       on: {
@@ -215,8 +213,8 @@ var __vue_render__ = function () {
       }
     }, [i == _vm.cells - 1 && _vm.items.length - _vm.cells > 0 ? _c('span', {
       staticClass: "lb-more"
-    }, [_vm._v(_vm._s(_vm.items.length - _vm.cells) + "+")]) : _vm._e()]) : _vm._e()];
-  })], 2)]) : _vm._e();
+    }, [_vm._v(_vm._s(_vm.items.length - _vm.cells) + "+")]) : _vm._e()]) : _vm._e();
+  }), 0)]) : _vm._e();
 };
 
 var __vue_staticRenderFns__ = [];
