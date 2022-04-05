@@ -1,15 +1,17 @@
 <template>
   <div class="VueLightboxAdvanced" v-if="items.length>0">
     <div class="lb-grid" :class="[css,items.length>cells?'lb-grid-' + cells: 'lb-grid-' + items.length]">
-      <a class="lb-item" v-for="(item, i) in shuffled" :href="item.src" role="link" @click.prevent="clicked(item)" v-if="i<cells" :style="bg(item.src)">
-        <span class="lb-more" v-if="i==cells-1 && items.length - cells>0">{{ items.length - cells}}+</span>
-      </a>
+      <template v-for="(item, i) in shuffled">
+        <a v-if="i<cells" class="lb-item" @click.stop.passive.self="clicked(item)" :style="bg(item.src)">
+          <span class="lb-more" v-if="i==cells-1 && items.length - cells>0">{{ items.length - cells}}+</span>
+        </a>
+      </template>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'Lightbox',
+  name: 'VueLightboxAdvanced',
   props: {
     items: {
       type: Array,

@@ -64,8 +64,10 @@ function _nonIterableRest() {
 //
 //
 //
+//
+//
 var script = {
-  name: 'Lightbox',
+  name: 'VueLightboxAdvanced',
   props: {
     items: {
       type: Array,
@@ -243,7 +245,7 @@ var __vue_render__ = function __vue_render__() {
   return _vm.items.length > 0 ? _c('div', {
     staticClass: "VueLightboxAdvanced"
   }, [_vm._ssrNode("<div" + _vm._ssrClass("lb-grid", [_vm.css, _vm.items.length > _vm.cells ? 'lb-grid-' + _vm.cells : 'lb-grid-' + _vm.items.length]) + ">" + _vm._ssrList(_vm.shuffled, function (item, i) {
-    return i < _vm.cells ? "<a" + _vm._ssrAttr("href", item.src) + " role=\"link\" class=\"lb-item\"" + _vm._ssrStyle(null, _vm.bg(item.src), null) + ">" + (i == _vm.cells - 1 && _vm.items.length - _vm.cells > 0 ? "<span class=\"lb-more\">" + _vm._ssrEscape(_vm._s(_vm.items.length - _vm.cells) + "+") + "</span>" : "<!---->") + "</a>" : "<!---->";
+    return i < _vm.cells ? "<a class=\"lb-item\"" + _vm._ssrStyle(null, _vm.bg(item.src), null) + ">" + (i == _vm.cells - 1 && _vm.items.length - _vm.cells > 0 ? "<span class=\"lb-more\">" + _vm._ssrEscape(_vm._s(_vm.items.length - _vm.cells) + "+") + "</span>" : "<!---->") + "</a>" : "<!---->";
   }) + "</div>")]) : _vm._e();
 };
 
@@ -256,7 +258,7 @@ var __vue_inject_styles__ = undefined;
 var __vue_scope_id__ = undefined;
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-44d8d085";
+var __vue_module_identifier__ = "data-v-4b9dfaef";
 /* functional template */
 
 var __vue_is_functional_template__ = false;
@@ -269,13 +271,15 @@ var __vue_is_functional_template__ = false;
 var __vue_component__ = /*#__PURE__*/normalizeComponent({
   render: __vue_render__,
   staticRenderFns: __vue_staticRenderFns__
-}, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);// Import vue component
+}, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
+
+var component$1 = __vue_component__;// Import vue component
 // IIFE injects install function into component, allowing component
 // to be registered via Vue.use() as well as Vue.component(),
 
 var component = /*#__PURE__*/(function () {
   // Get component instance
-  var installable = __vue_component__; // Attach install function executed by Vue.use()
+  var installable = component$1; // Attach install function executed by Vue.use()
 
   installable.install = function (Vue) {
     Vue.component('VueLightboxAdvanced', installable);
@@ -285,7 +289,8 @@ var component = /*#__PURE__*/(function () {
 })(); // It's possible to expose named exports when writing components that can
 // also be used as directives, etc. - eg. import { RollupDemoDirective } from 'rollup-demo';
 // export const RollupDemoDirective = directive;
-var namedExports=/*#__PURE__*/Object.freeze({__proto__:null,'default': component});// only expose one global var, with named exports exposed as properties of
+var namedExports=/*#__PURE__*/Object.freeze({__proto__:null,'default':component});// Attach named exports directly to component. IIFE/CJS will
+// only expose one global var, with named exports exposed as properties of
 // that global var (eg. plugin.namedExport)
 
 Object.entries(namedExports).forEach(function (_ref) {
