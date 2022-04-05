@@ -203,11 +203,6 @@ var __vue_render__ = function () {
       on: {
         "&click": function ($event) {
           $event.stopPropagation();
-
-          if ($event.target !== $event.currentTarget) {
-            return null;
-          }
-
           return _vm.clicked(item);
         }
       }

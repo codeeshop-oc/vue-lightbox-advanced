@@ -1,7 +1,7 @@
 <template>
   <div class="VueLightboxAdvanced" v-if="items.length>0">
     <div class="lb-grid" :class="[css,items.length>cells?'lb-grid-' + cells: 'lb-grid-' + items.length]">
-      <a v-for="(item, i) in shuffled" v-if="i<cells" class="lb-item" @click.stop.passive.self="clicked(item)" :style="bg(item.src)">
+      <a v-for="(item, i) in shuffled" v-if="i<cells" class="lb-item" @click.stop.passive="clicked(item)" :style="bg(item.src)">
         <span class="lb-more" v-if="i==cells-1 && items.length - cells>0">{{ items.length - cells}}+</span>
       </a>
     </div>

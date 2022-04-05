@@ -256,7 +256,7 @@ var __vue_inject_styles__ = undefined;
 var __vue_scope_id__ = undefined;
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-0b901fd6";
+var __vue_module_identifier__ = "data-v-4c172a44";
 /* functional template */
 
 var __vue_is_functional_template__ = false;
