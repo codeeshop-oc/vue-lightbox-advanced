@@ -29,16 +29,16 @@ Find out all available features on [settings props](https://github.com/codeeshop
 
 ```bash
 # npm
-npm i vue-lightbox-advanced
+npm i vue-lightbox-advanced@1
 # yarn
-yarn add vue-lightbox-advanced
+yarn add vue-lightbox-advanced@1
 ```
 
 ### cdn
 
 ```bash
 # latest
-https://unpkg.com/vue-lightbox-advanced
+https://unpkg.com/vue-lightbox-advanced@1
 ```
 
 <br/>
