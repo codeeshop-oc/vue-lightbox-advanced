@@ -1,6 +1,6 @@
 
 // Import vue component
-import component from '@/VueLightboxAdvanced.vue';
+import component from '@/vue-lightbox-advanced.vue';
 
 // Default export is installable instance of component.
 // IIFE injects install function into component, allowing component
@@ -10,8 +10,8 @@ export default /*#__PURE__*/(() => {
   const installable = component;
 
   // Attach install function executed by Vue.use()
-  installable.install = (Vue) => {
-    Vue.component('VueLightboxAdvanced', installable);
+  installable.install = (app) => {
+    app.component('VueLightboxAdvanced', installable);
   };
   return installable;
 })();

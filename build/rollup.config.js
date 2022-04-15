@@ -7,11 +7,10 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import babel from '@rollup/plugin-babel';
-import scss from "rollup-plugin-scss";
-
-
+import PostCSS from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
 import minimist from 'minimist';
+import scss from "rollup-plugin-scss";
 
 // Get browserslist config and remove ie from es build targets
 const esbrowserslist = fs.readFileSync('./.browserslistrc')
@@ -44,15 +43,20 @@ const baseConfig = {
       'process.env.NODE_ENV': JSON.stringify('production'),
     },
     vue: {
-      css: false,
-      template: {
-        isProduction: true,
-      },
     },
     postVue: [
       resolve({
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue'],
       }),
+      // Process only `<style module>` blocks.
+      PostCSS({
+        modules: {
+          generateScopedName: '[local]___[hash:base64:5]',
+        },
+        include: /&module=.*\.css$/,
+      }),
+      // Process all `<style>` blocks except `<style module>`.
+      PostCSS({ include: /(?<!&module=.*)\.css$/ }),
       commonjs(),
     ],
     babel: {
@@ -86,7 +90,7 @@ const cssConfig = {
   input: 'src/styles.js',
   plugins: [
     scss({
-      output: 'dist/VueLightboxAdvanced.css',
+      output: 'dist/vue-lightbox-advanced.css',
       outputStyle: "compressed",
     })
   ],
@@ -100,7 +104,7 @@ if (!argv.format || argv.format === 'es') {
     input: 'src/entry.esm.js',
     external,
     output: {
-      file: 'dist/VueLightboxAdvanced.esm.js',
+      file: 'dist/vue-lightbox-advanced.esm.js',
       format: 'esm',
       exports: 'named',
     },
@@ -132,7 +136,7 @@ if (!argv.format || argv.format === 'cjs') {
     external,
     output: {
       compact: true,
-      file: 'dist/VueLightboxAdvanced.ssr.js',
+      file: 'dist/vue-lightbox-advanced.ssr.js',
       format: 'cjs',
       name: 'VueLightboxAdvanced',
       exports: 'auto',
@@ -141,13 +145,7 @@ if (!argv.format || argv.format === 'cjs') {
     plugins: [
       replace(baseConfig.plugins.replace),
       ...baseConfig.plugins.preVue,
-      vue({
-        ...baseConfig.plugins.vue,
-        template: {
-          ...baseConfig.plugins.vue.template,
-          optimizeSSR: true,
-        },
-      }),
+      vue(baseConfig.plugins.vue),
       ...baseConfig.plugins.postVue,
       babel(baseConfig.plugins.babel),
     ],
@@ -161,7 +159,7 @@ if (!argv.format || argv.format === 'iife') {
     external,
     output: {
       compact: true,
-      file: 'dist/VueLightboxAdvanced.min.js',
+      file: 'dist/vue-lightbox-advanced.min.js',
       format: 'iife',
       name: 'VueLightboxAdvanced',
       exports: 'auto',
