@@ -2,9 +2,9 @@
 
 > Vue Lightbox Advanced Photo Grid component for Vue.js
 
-[![npm](https://img.shields.io/badge/npm-1.0.0-blue)](https://www.npmjs.com/package/vue-lightbox-advanced)
-[![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/vue2/LICENSE)
-[![bit](https://img.shields.io/badge/components-1-yellowgreen)](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/vue2/src/VueLightboxAdvanced.vue)
+[![npm](https://img.shields.io/badge/npm-2.0.0-blue)](https://www.npmjs.com/package/vue-lightbox-advanced)
+[![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/LICENSE)
+[![bit](https://img.shields.io/badge/components-1-yellowgreen)](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/src/vue-lightbox-advanced.vue)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/codeeshop-oc/vue-lightbox-advanced/issues?&q=is%3Aissue+is%3Aopen)
 
 Vue Lightbox Advanced provides flexibility of displaying first x (1-5) images of your gallery in a grid view as you seen on Facebook timeline. Click on the thumbnail will return an event with the index or file url (src) as per passed props that can be used to show the image or can be used to redirect to that specific file url (src).
@@ -14,13 +14,13 @@ It provides the shuffling images according to given options in docs.
 
 ## Version Support
 
-[Vue 3](https://github.com/codeeshop-oc/vue-lightbox-advanced/tree/main)
+Vue 3 - Current Branch
 
-Vue 2 - Current branch
+[Vue 2](https://github.com/codeeshop-oc/vue-lightbox-advanced/tree/vue2)
 
 ## 🎨 Features
 
-Find out all available features on [settings props](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/vue2/docs/API.md#props) and see how that works on [examples](https://codeeshop-oc.github.io/vue-lightbox-advanced/).
+Find out all available features on [settings props](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/docs/API.md#props) and see how that works on [examples](https://codeeshop-oc.github.io/vue-lightbox-advanced/).
 
 
 ## 🚚 Installation
@@ -29,16 +29,16 @@ Find out all available features on [settings props](https://github.com/codeeshop
 
 ```bash
 # npm
-npm i vue-lightbox-advanced@1
+npm i vue-lightbox-advanced
 # yarn
-yarn add vue-lightbox-advanced@1
+yarn add vue-lightbox-advanced
 ```
 
 ### cdn
 
 ```bash
 # latest
-https://unpkg.com/vue-lightbox-advanced@1
+https://unpkg.com/vue-lightbox-advanced
 ```
 
 <br/>
@@ -48,13 +48,13 @@ https://unpkg.com/vue-lightbox-advanced@1
 ```html
 <template>
   <div style="height: 250px; width: 400px;">
-    <VueLightboxAdvanced :items="images" />
+    <vue-lightbox-advanced :items="images" />
   </div>
 </template>
 
 <script>
   import VueLightboxAdvanced from 'vue-lightbox-advanced'
-  import 'vue-lightbox-advanced/dist/VueLightboxAdvanced.css'
+  import 'vue-lightbox-advanced/dist/vue-lightbox-advanced.css'
 
   export default {
     name: 'MyComponent',
@@ -82,7 +82,7 @@ https://unpkg.com/vue-lightbox-advanced@1
 
 ## 🔖 License
 
-This software is licensed under the [MIT](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/vue2/LICENSE).
+This software is licensed under the [MIT](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/LICENSE).
 
 ### Reference
 

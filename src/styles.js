@@ -1,1 +1,1 @@
-import styles from "./VueLightboxAdvanced.css";
+import styles from "./vue-lightbox-advanced.css";
