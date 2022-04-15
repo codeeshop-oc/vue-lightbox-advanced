@@ -38,7 +38,7 @@ yarn add vue-lightbox-advanced
 
 ```bash
 # latest
-https://unpkg.com/vue-lightbox-advanced@2
+https://unpkg.com/vue-lightbox-advanced
 ```
 
 <br/>
