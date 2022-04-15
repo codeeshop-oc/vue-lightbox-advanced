@@ -1,33 +1,29 @@
 <script>
-import Vue from 'vue';
-import VueLightboxAdvanced from '@/VueLightboxAdvanced.vue';
-import '@/VueLightboxAdvanced.css';
+import { defineComponent } from 'vue';
+import VueLightboxAdvanced from '@/vue-lightbox-advanced.vue';
+import '@/vue-lightbox-advanced.css';
 
-export default Vue.extend({
+export default defineComponent({
   name: 'ServeDev',
   data() {
     return {
       images: [
-        "https://i.wifegeek.com/200426/f9459c52.jpg",
-        "https://i.wifegeek.com/200426/5ce1e1c7.jpg",
-        "https://i.wifegeek.com/200426/5fa51df3.jpg",
-        "https://i.wifegeek.com/200426/663181fe.jpg",
-        "https://i.wifegeek.com/200426/2d110780.jpg",
-        "https://i.wifegeek.com/200426/e73cd3fa.jpg",
-        "https://i.wifegeek.com/200426/15160d6e.jpg",
-        "https://i.wifegeek.com/200426/d0c881ae.jpg",
-        "https://i.wifegeek.com/200426/a154fc3d.jpg",
-        "https://i.wifegeek.com/200426/71d3aa60.jpg",
-        "https://i.wifegeek.com/200426/d17ce9a0.jpg",
-        "https://i.wifegeek.com/200426/7c4deca9.jpg",
-        "https://i.wifegeek.com/200426/64672676.jpg",
-        "https://i.wifegeek.com/200426/de6ab9c6.jpg",
-        "https://i.wifegeek.com/200426/d8bcb6a7.jpg",
-        "https://i.wifegeek.com/200426/4085d03b.jpg",
-        "https://i.wifegeek.com/200426/177ef44c.jpg",
-        "https://i.wifegeek.com/200426/d74d9040.jpg",
-        "https://i.wifegeek.com/200426/81e24a47.jpg",
-        "https://i.wifegeek.com/200426/43e2e8bb.jpg"
+        "https://cdn.pixabay.com/photo/2015/09/17/14/24/woman-944261_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2015/10/30/20/13/boat-1014711_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2017/10/17/16/10/fantasy-2861107_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2016/05/11/16/32/bridge-1385938_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2018/09/19/23/03/sunset-3689760_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2020/09/15/09/10/church-5573087_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2017/05/04/12/43/zebra-2283914_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2018/01/25/14/12/nature-3106213_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2017/12/10/15/16/white-horse-3010129_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2017/06/07/10/47/elephant-2380009_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2017/05/09/03/46/alberta-2297204_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2017/01/18/17/14/girl-1990347_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2018/01/22/14/13/animal-3099035_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2015/10/30/20/13/boat-1014711_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2016/11/08/05/26/woman-1807533_960_720.jpg"
       ]
     }
   },
@@ -35,18 +31,76 @@ export default Vue.extend({
     VueLightboxAdvanced
   },
   methods: {
-    eventEmitted(index) {
+    onClicked(v) {
       console.log(`Event Emmited....`)
-      console.log(`Return Value: ${index}`)
-    }
+      console.log(`Return Index: ${v}`)
+    },
+    onClickedSrc(v) {
+      console.log(`Event Emmited....`)
+      console.log(`Return Value: ${v}`)
+    },
   }
 });
 </script>
 
 <template>
-  <div id="app">
-    <div style="height: 250px; width: 400px;">
-      <VueLightboxAdvanced :returnSrc="true" :items="images"  @clicked:index="eventEmitted" />
+  <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+    <div id="app">
+      <h3>Default</h3>
+      <div class="fixheight">
+        <vue-lightbox-advanced :items="images" />
+      </div>
+
+      <h3>With Shuffle ( RANDOM )</h3>
+      <div class="fixheight">
+        <vue-lightbox-advanced :shuffle=true shuffle-by="RANDOM" :items="images" />
+      </div>
+
+      <h3>With 3 column</h3>
+      <div class="fixheight">
+        <vue-lightbox-advanced :cells="3" :items="images" :shuffle=true shuffle-by="DESC" />
+      </div>
+
+      <h3>With Event</h3>
+      <div class="fixheight">
+        <vue-lightbox-advanced @clicked:index="onClicked" :items="images" />
+      </div>
+
+      <h3>With SRC</h3>
+      <div class="fixheight">
+        <vue-lightbox-advanced :return-src="true" @clicked:index="onClickedSrc" :items="images" />
+      </div>
     </div>
   </div>
 </template>
+
+<style>
+  body {
+     font-family: 'Caveat';
+  }
+  .text-center {
+    text-align: center;
+    /*margin: auto;*/
+  }
+  .fixheight {
+    width: 550px;
+  }
+  #app {
+      margin: auto;
+  }
+  @media (min-width: 601px) {
+    #app {
+      display: table;
+    }
+  }
+  @media (max-width: 800px) {
+    .fixheight {
+      width: 450px;
+    }
+  }
+  @media (max-width: 600px) {
+    .fixheight {
+      width: 100%;
+    }
+  }
+</style>
