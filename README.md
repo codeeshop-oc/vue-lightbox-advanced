@@ -22,7 +22,6 @@ Vue 3 - Current Branch
 
 Find out all available features on [settings props](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/docs/API.md#props) and see how that works on [examples](https://codeeshop-oc.github.io/vue-lightbox-advanced/).
 
-
 ## 🚚 Installation
 
 ### yarn/npm
@@ -60,20 +59,20 @@ https://unpkg.com/vue-lightbox-advanced
     name: 'MyComponent',
     components: { VueLightboxAdvanced },
     data() {
-	    return {
-	      images: [
-	        "https://i.wifegeek.com/200426/f9459c52.jpg",
-	        "https://i.wifegeek.com/200426/5ce1e1c7.jpg",
-	        "https://i.wifegeek.com/200426/5fa51df3.jpg",
-	        "https://i.wifegeek.com/200426/663181fe.jpg",
-	        "https://i.wifegeek.com/200426/2d110780.jpg",
-	        "https://i.wifegeek.com/200426/e73cd3fa.jpg",
-	        "https://i.wifegeek.com/200426/15160d6e.jpg",
-	        "https://i.wifegeek.com/200426/81e24a47.jpg",
-	        "https://i.wifegeek.com/200426/43e2e8bb.jpg"
-	      ]
-	    }
-	},
+      return {
+        images: [
+          'https://i.wifegeek.com/200426/f9459c52.jpg',
+          'https://i.wifegeek.com/200426/5ce1e1c7.jpg',
+          'https://i.wifegeek.com/200426/5fa51df3.jpg',
+          'https://i.wifegeek.com/200426/663181fe.jpg',
+          'https://i.wifegeek.com/200426/2d110780.jpg',
+          'https://i.wifegeek.com/200426/e73cd3fa.jpg',
+          'https://i.wifegeek.com/200426/15160d6e.jpg',
+          'https://i.wifegeek.com/200426/81e24a47.jpg',
+          'https://i.wifegeek.com/200426/43e2e8bb.jpg'
+        ]
+      }
+    }
   }
 </script>
 ```
