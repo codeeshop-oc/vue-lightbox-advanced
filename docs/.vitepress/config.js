@@ -2,7 +2,7 @@ export default {
   lang: 'en-US',
   title: 'vue-lightbox-advanced',
   description: 'Vue Lightbox Advanced Photo Grid component Vue.js 3',
-  base: '/',
+  base: '/vue-lightbox-advanced/',
   editLinks: true,
   themeConfig: {
     repo: 'codeeshop-oc/vue-lightbox-advanced',
