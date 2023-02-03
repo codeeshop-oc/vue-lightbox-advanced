@@ -20,7 +20,7 @@ Vue 3 - Current Branch ( TypeScript + Vite + vitest )
 
 ## 🎨 Features
 
-Find out all available features on [settings props](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/docs/API.md#props) and see how that works on [examples](https://codeeshop-oc.github.io/vue-lightbox-advanced/).
+Find out all available features on [settings props](/docs/api/props.md) and see how that works on [examples](/docs/examples.md).
 
 ## 🚚 Installation
 
