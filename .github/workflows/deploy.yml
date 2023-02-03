@@ -24,7 +24,6 @@ jobs:
         shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
           
       - name: Set node
         uses: actions/setup-node@v3
@@ -36,7 +35,10 @@ jobs:
         run: pnpm i
 
       - name: Lint
-        run: pnpm run lint
+        run: pnpm lint
+      
+      - name: Test
+        run: pnpm test
   
   build:
     needs: lint
@@ -57,7 +59,6 @@ jobs:
         shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
-
           
       - name: Set node
         uses: actions/setup-node@v3
@@ -70,3 +71,9 @@ jobs:
 
       - name: Build
         run: pnpm docs:build
+                
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/.vitepress/dist
