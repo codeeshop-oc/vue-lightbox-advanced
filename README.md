@@ -2,7 +2,7 @@
 
 > Vue Lightbox Advanced Photo Grid component for Vue.js
 
-[![npm](https://img.shields.io/badge/npm-2.0.0-blue)](https://www.npmjs.com/package/vue-lightbox-advanced)
+[![npm](https://img.shields.io/badge/npm-2.0.1-blue)](https://www.npmjs.com/package/vue-lightbox-advanced)
 [![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/LICENSE)
 [![bit](https://img.shields.io/badge/components-1-yellowgreen)](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/src/vue-lightbox-advanced.vue)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/codeeshop-oc/vue-lightbox-advanced/issues?&q=is%3Aissue+is%3Aopen)
@@ -14,7 +14,7 @@ It provides the shuffling images according to given options in docs.
 
 ## Version Support
 
-Vue 3 - Current Branch
+Vue 3 - Current Branch ( TypeScript + Vite + vitest )
 
 [Vue 2](https://github.com/codeeshop-oc/vue-lightbox-advanced/tree/vue2)
 

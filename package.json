@@ -3,7 +3,7 @@
   "description": "Vue Lightbox Advanced Photo Grid component for Vue.js",
   "private": false,
   "packageManager": "pnpm@7.1.0",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "author": "Code-E-Shop",
   "license": "MIT",
