@@ -2,7 +2,7 @@
 
 > Vue Lightbox Advanced Photo Grid component for Vue.js
 
-[![npm](https://img.shields.io/badge/npm-2.0.1-blue)](https://www.npmjs.com/package/vue-lightbox-advanced)
+[![Latest Stable Version](https://img.shields.io/npm/v/vue-lightbox-advanced.svg)](https://www.npmjs.com/package/vue-lightbox-advanced) [![Total Downloads](https://img.shields.io/npm/dt/vue-lightbox-advanced.svg)](https://npm-stat.com/charts.html?package=vue-lightbox-advanced)
 [![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/LICENSE)
 [![bit](https://img.shields.io/badge/components-1-yellowgreen)](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/src/vue-lightbox-advanced.vue)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/codeeshop-oc/vue-lightbox-advanced/issues?&q=is%3Aissue+is%3Aopen)
