@@ -4,10 +4,7 @@
 
 [![Latest Stable Version](https://img.shields.io/npm/v/vue-lightbox-advanced.svg)](https://www.npmjs.com/package/vue-lightbox-advanced) [![Total Downloads](https://img.shields.io/npm/dt/vue-lightbox-advanced.svg)](https://npm-stat.com/charts.html?package=vue-lightbox-advanced)
 [![license](https://img.shields.io/badge/license-MIT-green)](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/LICENSE)
-[![bit](https://img.shields.io/badge/components-1-yellowgreen)](https://github.com/codeeshop-oc/vue-lightbox-advanced/blob/main/src/vue-lightbox-advanced.vue)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/codeeshop-oc/vue-lightbox-advanced/issues?&q=is%3Aissue+is%3Aopen)
-[![Deploy](https://github.com/codeeshop-oc/vue-lightbox-advanced/actions/workflows/deploy.yml/badge.svg)](https://github.com/codeeshop-oc/vue-lightbox-advanced/actions/workflows/deploy.yml)
-[![CodeQL](https://github.com/codeeshop-oc/vue-lightbox-advanced/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/codeeshop-oc/vue-lightbox-advanced/actions/workflows/codeql-analysis.yml)
 ![Downloads Monthly](https://img.shields.io/npm/dm/vue-lightbox-advanced.svg)
 
 Vue Lightbox Advanced provides flexibility of displaying first x (1-5) images of your gallery in a grid view as you seen on Facebook timeline. Click on the thumbnail will return an event with the index or file url (src) as per passed props that can be used to show the image or can be used to redirect to that specific file url (src).

@@ -31,6 +31,10 @@ export default {
           { text: 'Events', link: '/api/events' }
         ]
       }
+    ],
+
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/codeeshop-oc/vue-lightbox-advanced' }
     ]
   }
 }
